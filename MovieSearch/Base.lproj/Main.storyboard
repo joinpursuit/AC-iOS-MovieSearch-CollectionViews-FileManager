@@ -163,7 +163,7 @@
                     <navigationItem key="navigationItem" title="Details" id="OND-49-pQC">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="favorite-unfilled-32" id="aSh-zl-UtR">
                             <connections>
-                                <action selector="addToFavorites:" destination="zn7-0t-cSL" id="azX-Wa-rYW"/>
+                                <action selector="addFavorite:" destination="zn7-0t-cSL" id="azX-Wa-rYW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -29,7 +29,7 @@ class DetailViewController: UIViewController {
         imageView.image = image
     }
 
-    @IBAction func addToFavorites(_ sender: UIBarButtonItem) {
+    @IBAction func addFavorite(_ sender: UIBarButtonItem) {
         guard let image = imageView.image else { return }
         PersistentStoreManager.manager.addToFavorites(movie: movie, andImage: image)
     }

@@ -18,7 +18,7 @@ class PersistentStoreManager {
     
     private var favorites = [Favorite]() {
         didSet{
-            saveFavorites()
+            saveToDisk()
         }
     }
     
@@ -35,7 +35,7 @@ class PersistentStoreManager {
     }
     
     // save to documents directory
-    func saveFavorites() {
+    func saveToDisk() {
         let encoder = PropertyListEncoder()
         do {
             let data = try encoder.encode(favorites)
@@ -69,6 +69,16 @@ class PersistentStoreManager {
         let indexExist = favorites.index{ $0.trackId == movie.trackId }
         if indexExist != nil { print("FAVORITE EXIST"); return }
         
+        // 1) save image from favorite photo
+        storeImageToDisk(image: image, andMovie: movie)
+        
+        // 2) save favorite object
+        let newFavorite = Favorite.init(collectionName: movie.collectionName, collectionId: movie.collectionId, trackId: movie.trackId, longDescription: movie.longDescription)
+        favorites.append(newFavorite)
+    }
+    
+    // store image
+    func storeImageToDisk(image: UIImage, andMovie movie: Movie) {
         // packing data from image
         guard let imageData = UIImagePNGRepresentation(image) else { return }
         
@@ -81,12 +91,8 @@ class PersistentStoreManager {
         } catch {
             print("image saving error: \(error.localizedDescription)")
         }
-        
-        // 2) save favorite object
-        let newFavorite = Favorite.init(collectionName: movie.collectionName, collectionId: movie.collectionId, trackId: movie.trackId, longDescription: movie.longDescription)
-        favorites.append(newFavorite)
     }
-    
+        
     func getFavorites() -> [Favorite] {
         return favorites
     }
