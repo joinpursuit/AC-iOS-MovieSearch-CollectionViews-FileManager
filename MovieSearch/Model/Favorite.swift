@@ -13,6 +13,8 @@ struct Favorite: Codable {
     let collectionId: Int?
     let trackId: Int
     let longDescription: String?
+    let artworkUrl100: URL
+    let artworkUrl60: URL
     
     // computed property to return image from documents
     var image: UIImage? {

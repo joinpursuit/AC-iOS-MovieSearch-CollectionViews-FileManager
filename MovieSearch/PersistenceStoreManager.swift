@@ -35,10 +35,12 @@ class PersistentStoreManager {
     }
     
     // save to documents directory
+    // write to path: /Documents/
     func saveToDisk() {
         let encoder = PropertyListEncoder()
         do {
             let data = try encoder.encode(favorites)
+            // Does the writing to disk
             try data.write(to: dataFilePath(withPathName: PersistentStoreManager.kPathname), options: .atomic)
         } catch {
             print("encoding error: \(error.localizedDescription)")
@@ -50,7 +52,7 @@ class PersistentStoreManager {
     
     // load from documents directory
     func load() {
-        // where are we loading from????
+        // what's the path we are reading from?
         let path = dataFilePath(withPathName: PersistentStoreManager.kPathname)
         let decoder = PropertyListDecoder()
         do {
@@ -73,7 +75,7 @@ class PersistentStoreManager {
         storeImageToDisk(image: image, andMovie: movie)
         
         // 2) save favorite object
-        let newFavorite = Favorite.init(collectionName: movie.collectionName, collectionId: movie.collectionId, trackId: movie.trackId, longDescription: movie.longDescription)
+        let newFavorite = Favorite.init(collectionName: movie.collectionName, collectionId: movie.collectionId, trackId: movie.trackId, longDescription: movie.longDescription, artworkUrl100: movie.artworkUrl100, artworkUrl60: movie.artworkUrl60)
         favorites.append(newFavorite)
     }
     
