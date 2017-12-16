@@ -138,7 +138,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MovieSearch/PersistenceStoreManager.swift"
-            timestampString = "535079162.346311"
+            timestampString = "535116187.254592"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "70"
@@ -186,7 +186,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MovieSearch/PersistenceStoreManager.swift"
-            timestampString = "535079162.347186"
+            timestampString = "535116187.255182"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "73"
@@ -202,7 +202,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MovieSearch/PersistenceStoreManager.swift"
-            timestampString = "535079162.347785"
+            timestampString = "535116187.255591"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
@@ -218,7 +218,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MovieSearch/PersistenceStoreManager.swift"
-            timestampString = "535079162.348395"
+            timestampString = "535116187.256012"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
@@ -234,7 +234,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MovieSearch/PersistenceStoreManager.swift"
-            timestampString = "535079162.349005"
+            timestampString = "535116187.256416"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "46"
@@ -298,7 +298,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MovieSearch/PersistenceStoreManager.swift"
-            timestampString = "535079162.349827"
+            timestampString = "535116187.256854"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "55"
@@ -314,59 +314,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MovieSearch/View Controllers/DetailViewController.swift"
-            timestampString = "535079583.815055"
+            timestampString = "535117404.281993"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "configureView(movie:favorite:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MovieSearch.DetailViewController.configureView(movie: Swift.Optional&lt;MovieSearch.Movie&gt;, favorite: Swift.Optional&lt;MovieSearch.Favorite&gt;) -&gt; ()"
-                  moduleName = "MovieSearch"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alexpaul/Desktop/MovieSearch/MovieSearch/View%20Controllers/DetailViewController.swift"
-                  timestampString = "535076645.601035"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "1122">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MovieSearch.DetailViewController.configureView(movie: Swift.Optional&lt;MovieSearch.Movie&gt;, favorite: Swift.Optional&lt;MovieSearch.Favorite&gt;) -&gt; ()"
-                  moduleName = "MovieSearch"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alexpaul/Desktop/MovieSearch/MovieSearch/View%20Controllers/DetailViewController.swift"
-                  timestampString = "535076645.605394"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "1134">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MovieSearch/View Controllers/DetailViewController.swift"
-            timestampString = "535079583.815734"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "configureView(movie:favorite:)"
             landmarkType = "7">
             <Locations>
@@ -410,27 +362,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MovieSearch/View Controllers/DetailViewController.swift"
-            timestampString = "535079583.816131"
+            timestampString = "535117404.282087"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "removeFavorite()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MovieSearch/View Controllers/DetailViewController.swift"
-            timestampString = "535079583.81649"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "removeFavorite()"
             landmarkType = "7">
             <Locations>
@@ -442,12 +378,12 @@
                   moduleName = "MovieSearch"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/alexpaul/Desktop/MovieSearch/MovieSearch/View%20Controllers/DetailViewController.swift"
-                  timestampString = "535079584.51647"
+                  timestampString = "535114146.157708"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "49"
-                  endingLineNumber = "49"
-                  offsetFromSymbolStart = "29">
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "1042">
                </Location>
                <Location
                   shouldBeEnabled = "No"
@@ -457,12 +393,12 @@
                   moduleName = "MovieSearch"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/alexpaul/Desktop/MovieSearch/MovieSearch/View%20Controllers/DetailViewController.swift"
-                  timestampString = "535079584.518857"
+                  timestampString = "535114146.159848"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "49"
-                  endingLineNumber = "49"
-                  offsetFromSymbolStart = "188">
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "111">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -474,12 +410,268 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MovieSearch/PersistenceStoreManager.swift"
-            timestampString = "535079162.351483"
+            timestampString = "535116187.257276"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "removeFavorite(fromIndex:andMovieImage:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieSearch/View Controllers/MovieSearchController.swift"
+            timestampString = "535115867.177459"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "defaultSearch()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieSearch.MovieSearchController.defaultSearch() -&gt; ()"
+                  moduleName = "MovieSearch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexpaul/Desktop/MovieSearch/MovieSearch/View%20Controllers/MovieSearchController.swift"
+                  timestampString = "535080809.741042"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;, Swift.Optional&lt;Swift.Array&lt;MovieSearch.Movie&gt;&gt;) -&gt; () in MovieSearch.MovieSearchController.defaultSearch() -&gt; ()"
+                  moduleName = "MovieSearch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexpaul/Desktop/MovieSearch/MovieSearch/View%20Controllers/MovieSearchController.swift"
+                  timestampString = "535080809.74393"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieSearch/View Controllers/MovieSearchController.swift"
+            timestampString = "535115867.177521"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "defaultSearch()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieSearch/View Controllers/MovieSearchController.swift"
+            timestampString = "535115867.177586"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "defaultSearch()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieSearch/View Controllers/DetailViewController.swift"
+            timestampString = "535117404.282218"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "fetchMovieDetails()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieSearch/View Controllers/DetailViewController.swift"
+            timestampString = "535117404.282276"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "fetchMovieDetails()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieSearch/View Controllers/DetailViewController.swift"
+            timestampString = "535117404.282334"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "addFavorite(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieSearch/View Controllers/DetailViewController.swift"
+            timestampString = "535117404.282388"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "removeFavorite()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieSearch/View Controllers/DetailViewController.swift"
+            timestampString = "535117404.282444"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "addFavorite(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieSearch/PersistenceStoreManager.swift"
+            timestampString = "535116187.257812"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "addToFavorites(movie:andImage:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieSearch.PersistentStoreManager.addToFavorites(movie: MovieSearch.Movie, andImage: __ObjC.UIImage) -&gt; Swift.Bool"
+                  moduleName = "MovieSearch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexpaul/Desktop/MovieSearch/MovieSearch/PersistenceStoreManager.swift"
+                  timestampString = "535114943.290483"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (MovieSearch.Favorite) -&gt; Swift.Bool in MovieSearch.PersistentStoreManager.addToFavorites(movie: MovieSearch.Movie, andImage: __ObjC.UIImage) -&gt; Swift.Bool"
+                  moduleName = "MovieSearch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexpaul/Desktop/MovieSearch/MovieSearch/PersistenceStoreManager.swift"
+                  timestampString = "535114943.293196"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "286">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieSearch/PersistenceStoreManager.swift"
+            timestampString = "535116187.258203"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "addToFavorites(movie:andImage:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieSearch/PersistenceStoreManager.swift"
+            timestampString = "535116187.258588"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "storeImageToDisk(image:andMovie:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieSearch/PersistenceStoreManager.swift"
+            timestampString = "535116187.258997"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "storeImageToDisk(image:andMovie:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

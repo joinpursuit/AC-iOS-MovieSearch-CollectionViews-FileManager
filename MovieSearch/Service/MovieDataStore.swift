@@ -1,5 +1,5 @@
 //
-//  PersistenceStoreManager.swift
+//  MovieDataStore.swift
 //  MovieSearch
 //
 //  Created by Alex Paul on 12/15/17.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class PersistentStoreManager {
+class MovieDataStore {
     
     static let kPathname = "Favorites.plist"
     
     // singleton
     private init(){}
-    static let manager = PersistentStoreManager()
+    static let manager = MovieDataStore()
     
     private var favorites = [Favorite]() {
         didSet{
@@ -31,7 +31,7 @@ class PersistentStoreManager {
     // /documents/Favorites.plist
     // returns the path for supplied name from the dcouments directory
     func dataFilePath(withPathName path: String) -> URL {
-        return PersistentStoreManager.manager.documentsDirectory().appendingPathComponent(path)
+        return MovieDataStore.manager.documentsDirectory().appendingPathComponent(path)
     }
     
     // save to documents directory
@@ -41,7 +41,7 @@ class PersistentStoreManager {
         do {
             let data = try encoder.encode(favorites)
             // Does the writing to disk
-            try data.write(to: dataFilePath(withPathName: PersistentStoreManager.kPathname), options: .atomic)
+            try data.write(to: dataFilePath(withPathName: MovieDataStore.kPathname), options: .atomic)
         } catch {
             print("encoding error: \(error.localizedDescription)")
         }
@@ -53,7 +53,7 @@ class PersistentStoreManager {
     // load from documents directory
     func load() {
         // what's the path we are reading from?
-        let path = dataFilePath(withPathName: PersistentStoreManager.kPathname)
+        let path = dataFilePath(withPathName: MovieDataStore.kPathname)
         let decoder = PropertyListDecoder()
         do {
             let data = try Data.init(contentsOf: path)
@@ -68,7 +68,7 @@ class PersistentStoreManager {
     // 2. appends favorite item to array 
     func addToFavorites(movie: Movie, andImage image: UIImage) -> Bool  {
         // checking for uniqueness
-        let indexExist = favorites.index{ $0.trackId == movie.trackId }
+        let indexExist = favorites.index{ $0.imdbId == movie.imdbId }
         if indexExist != nil { print("FAVORITE EXIST"); return false }
         
         // 1) save image from favorite photo
@@ -76,7 +76,7 @@ class PersistentStoreManager {
         if !success { return false }
         
         // 2) save favorite object
-        let newFavorite = Favorite.init(collectionName: movie.collectionName, collectionId: movie.collectionId, trackId: movie.trackId, longDescription: movie.longDescription, artworkUrl100: movie.artworkUrl100, artworkUrl60: movie.artworkUrl60)
+        let newFavorite = Favorite.init(title: movie.title, year: movie.year, imdbId: movie.imdbId, type: movie.type, poster: movie.poster, plot: movie.plot)
         favorites.append(newFavorite)
         return true
     }
@@ -89,13 +89,29 @@ class PersistentStoreManager {
         // writing and saving to documents folder
         
         // 1) save image from favorite photo
-        let imageURL = PersistentStoreManager.manager.dataFilePath(withPathName: "\(movie.trackId)")
+        let imageURL = MovieDataStore.manager.dataFilePath(withPathName: movie.imdbId)
         do {
             try imageData.write(to: imageURL)
         } catch {
             print("image saving error: \(error.localizedDescription)")
         }
         return true
+    }
+    
+    func isMovieInFavorites(movie: Movie) -> Bool {
+        // checking for uniqueness
+        let indexExist = favorites.index{ $0.imdbId == movie.imdbId }
+        if indexExist != nil {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func getFavoriteWithId(imdbId: String) -> Favorite? {
+        let index = getFavorites().index{$0.imdbId == imdbId}
+        guard let indexFound = index else { return nil }
+        return favorites[indexFound]
     }
         
     func getFavorites() -> [Favorite] {
@@ -105,7 +121,7 @@ class PersistentStoreManager {
     func removeFavorite(fromIndex index: Int, andMovieImage favorite: Favorite) -> Bool {
         favorites.remove(at: index)
         // remove image
-        let imageURL = PersistentStoreManager.manager.dataFilePath(withPathName: "\(favorite.trackId)")
+        let imageURL = MovieDataStore.manager.dataFilePath(withPathName: favorite.imdbId)
         do {
             try FileManager.default.removeItem(at: imageURL)
             print("\n==============================================================================")

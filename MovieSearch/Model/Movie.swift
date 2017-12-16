@@ -9,14 +9,29 @@
 import Foundation
 
 struct Movie: Codable {
-    let artworkUrl100: URL
-    let artworkUrl60: URL
-    let collectionName: String?
-    let collectionId: Int?
-    let trackId: Int
-    let longDescription: String?
+    let title: String
+    let year: String
+    let imdbId: String
+    let type: String
+    let poster: URL
+    // optional keys
+    var plot: String?
+    enum CodingKeys: String, CodingKey {
+        case title = "Title"
+        case year = "Year"
+        case imdbId = "imdbID"
+        case type = "Type"
+        case poster = "Poster"
+        case plot = "Plot"
+    }
 }
 
-struct MovieResults: Codable {
-    let results: [Movie]
+struct SearchResults: Codable {
+    let search: [Movie]
+    enum CodingKeys: String, CodingKey {
+        case search = "Search"
+    }
 }
+
+
+

@@ -33,7 +33,7 @@ class MovieSearchController: UIViewController {
     }
     
     func defaultSearch() {
-        AppleMovieAPIService.searchMovie(keyword: "christmas", completion: { (error, movies) in
+        OMDbAPIService.movieSearch(keyword: "christmas", completion: { (error, movies) in
             if let error = error {
                 let alertController = UIAlertController(title: "Error Occured", message: "\(error.localizedDescription)", preferredStyle: .alert)
                 let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
@@ -63,7 +63,7 @@ extension MovieSearchController: UISearchBarDelegate {
         guard let searchText = searchBar.text else { return }
         if !searchText.isEmpty {
             guard let encodedString = searchText.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else { return }
-            AppleMovieAPIService.searchMovie(keyword: encodedString, completion: { (error, movies) in
+            OMDbAPIService.movieSearch(keyword: encodedString, completion: { (error, movies) in
                 if let error = error {
                     let alertController = UIAlertController(title: "Error Occured", message: "\(error.localizedDescription)", preferredStyle: .alert)
                     let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
@@ -92,7 +92,7 @@ extension MovieSearchController: UICollectionViewDataSource {
     func configureMovie(movie: Movie, forCell cell: MovieCell) {
         DispatchQueue.global().async {
             do {
-                let imageData = try Data.init(contentsOf: movie.artworkUrl100)
+                let imageData = try Data.init(contentsOf: movie.poster)
                 DispatchQueue.main.async {
                     cell.imageView.image = UIImage.init(data: imageData)
                 }

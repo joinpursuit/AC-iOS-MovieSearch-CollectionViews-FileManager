@@ -30,7 +30,7 @@ class FavoritesViewController: UIViewController {
             let detailVC = segue.destination as! DetailViewController
             let cell = sender as! MovieCell
             guard let indexPath = favoritesCollectionView.indexPath(for: cell) else { return }
-            detailVC.favorite = PersistentStoreManager.manager.getFavorites()[indexPath.row]
+            detailVC.favorite = MovieDataStore.manager.getFavorites()[indexPath.row]
             detailVC.image = cell.imageView.image
         }
     }
@@ -39,12 +39,12 @@ class FavoritesViewController: UIViewController {
 
 extension FavoritesViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return PersistentStoreManager.manager.getFavorites().count
+        return MovieDataStore.manager.getFavorites().count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCell", for: indexPath) as! MovieCell
-        let favorite = PersistentStoreManager.manager.getFavorites()[indexPath.row]
+        let favorite = MovieDataStore.manager.getFavorites()[indexPath.row]
         configureMovie(favorite: favorite, forCell: cell)
         return cell
     }
