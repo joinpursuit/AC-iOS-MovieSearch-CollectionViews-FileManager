@@ -26,3 +26,4 @@ struct Favorite: Codable {
         }
     }
 }
+

@@ -66,23 +66,25 @@ class PersistentStoreManager {
     // does 2 tasks:
     // 1. stores image in documents folder
     // 2. appends favorite item to array 
-    func addToFavorites(movie: Movie, andImage image: UIImage) {
+    func addToFavorites(movie: Movie, andImage image: UIImage) -> Bool  {
         // checking for uniqueness
         let indexExist = favorites.index{ $0.trackId == movie.trackId }
-        if indexExist != nil { print("FAVORITE EXIST"); return }
+        if indexExist != nil { print("FAVORITE EXIST"); return false }
         
         // 1) save image from favorite photo
-        storeImageToDisk(image: image, andMovie: movie)
+        let success = storeImageToDisk(image: image, andMovie: movie)
+        if !success { return false }
         
         // 2) save favorite object
         let newFavorite = Favorite.init(collectionName: movie.collectionName, collectionId: movie.collectionId, trackId: movie.trackId, longDescription: movie.longDescription, artworkUrl100: movie.artworkUrl100, artworkUrl60: movie.artworkUrl60)
         favorites.append(newFavorite)
+        return true
     }
     
     // store image
-    func storeImageToDisk(image: UIImage, andMovie movie: Movie) {
+    func storeImageToDisk(image: UIImage, andMovie movie: Movie) -> Bool {
         // packing data from image
-        guard let imageData = UIImagePNGRepresentation(image) else { return }
+        guard let imageData = UIImagePNGRepresentation(image) else { return false }
         
         // writing and saving to documents folder
         
@@ -93,10 +95,27 @@ class PersistentStoreManager {
         } catch {
             print("image saving error: \(error.localizedDescription)")
         }
+        return true
     }
         
     func getFavorites() -> [Favorite] {
         return favorites
+    }
+    
+    func removeFavorite(fromIndex index: Int, andMovieImage favorite: Favorite) -> Bool {
+        favorites.remove(at: index)
+        // remove image
+        let imageURL = PersistentStoreManager.manager.dataFilePath(withPathName: "\(favorite.trackId)")
+        do {
+            try FileManager.default.removeItem(at: imageURL)
+            print("\n==============================================================================")
+            print("\(imageURL) removed")
+            print("==============================================================================\n")
+            return true
+        } catch {
+            print("error removing: \(error.localizedDescription)")
+            return false
+        }
     }
 
 }

@@ -24,6 +24,17 @@ class FavoritesViewController: UIViewController {
         super.viewWillAppear(true)
         favoritesCollectionView.reloadData()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetails" {
+            let detailVC = segue.destination as! DetailViewController
+            let cell = sender as! MovieCell
+            guard let indexPath = favoritesCollectionView.indexPath(for: cell) else { return }
+            detailVC.favorite = PersistentStoreManager.manager.getFavorites()[indexPath.row]
+            detailVC.image = cell.imageView.image
+        }
+    }
+
 }
 
 extension FavoritesViewController: UICollectionViewDataSource {

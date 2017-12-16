@@ -54,7 +54,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="mdq-VY-G5N">
+                            <searchBar contentMode="redraw" placeholder="enter your movie search" translatesAutoresizingMaskIntoConstraints="NO" id="mdq-VY-G5N">
                                 <rect key="frame" x="0.0" y="64" width="375" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="11Z-Tu-Xzr"/>
@@ -176,7 +176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ri9-G3-cI8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1704.8" y="133.5832083958021"/>
+            <point key="canvasLocation" x="2134" y="699"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KzC-TJ-FOH">
@@ -216,7 +216,7 @@
             </objects>
             <point key="canvasLocation" x="-1374" y="843"/>
         </scene>
-        <!--Favorites View Controller-->
+        <!--Favorites-->
         <scene sceneID="DAH-DO-hPS">
             <objects>
                 <viewController id="dyu-0C-iqE" customClass="FavoritesViewController" customModule="MovieSearch" customModuleProvider="target" sceneMemberID="viewController">
@@ -255,6 +255,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="8QK-ba-z3F" id="uyM-kh-J2f"/>
+                                            <segue destination="zn7-0t-cSL" kind="show" identifier="showDetails" id="WzC-Wv-YM7"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -269,7 +270,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Cow-ti-Y0k"/>
                     </view>
-                    <navigationItem key="navigationItem" id="sPz-Vr-Ytm"/>
+                    <navigationItem key="navigationItem" title="Favorites" id="sPz-Vr-Ytm"/>
                     <connections>
                         <outlet property="favoritesCollectionView" destination="wB7-Hc-ffk" id="zcn-fq-mac"/>
                     </connections>
@@ -301,4 +302,7 @@
     <resources>
         <image name="favorite-unfilled-32" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="TXI-lJ-21a"/>
+    </inferredMetricsTieBreakers>
 </document>

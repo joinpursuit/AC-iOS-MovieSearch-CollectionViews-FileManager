@@ -29,6 +29,20 @@ class MovieSearchController: UIViewController {
         searchCollecionView.delegate = self
         searchBar.delegate = self
         searchCollecionView.dataSource = self
+        defaultSearch()
+    }
+    
+    func defaultSearch() {
+        AppleMovieAPIService.searchMovie(keyword: "christmas", completion: { (error, movies) in
+            if let error = error {
+                let alertController = UIAlertController(title: "Error Occured", message: "\(error.localizedDescription)", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                alertController.addAction(okAction)
+                self.present(alertController, animated: true, completion: nil)
+            } else if let movies = movies {
+                self.movies = movies
+            }
+        })
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -49,7 +63,7 @@ extension MovieSearchController: UISearchBarDelegate {
         guard let searchText = searchBar.text else { return }
         if !searchText.isEmpty {
             guard let encodedString = searchText.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else { return }
-            AppleMovieAPIService.shared.searchMovie(keyword: encodedString, completion: { (error, movies) in
+            AppleMovieAPIService.searchMovie(keyword: encodedString, completion: { (error, movies) in
                 if let error = error {
                     let alertController = UIAlertController(title: "Error Occured", message: "\(error.localizedDescription)", preferredStyle: .alert)
                     let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
