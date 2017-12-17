@@ -95,7 +95,6 @@
 				5759D5C11FE488DB000B5D75 /* Model */,
 				5759D5C21FE488E3000B5D75 /* View */,
 				5759D5C01FE488CC000B5D75 /* View Controllers */,
-				574482781FE4320D00E41711 /* Main.storyboard */,
 				5759D5C31FE488F8000B5D75 /* Supporting Files */,
 				574482801FE4320D00E41711 /* Info.plist */,
 			);
@@ -141,6 +140,7 @@
 		5759D5C31FE488F8000B5D75 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				574482781FE4320D00E41711 /* Main.storyboard */,
 				574482741FE4320D00E41711 /* AppDelegate.swift */,
 				5744827B1FE4320D00E41711 /* Assets.xcassets */,
 				5744827D1FE4320D00E41711 /* LaunchScreen.storyboard */,
