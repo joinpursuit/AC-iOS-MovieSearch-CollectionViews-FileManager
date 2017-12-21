@@ -10,8 +10,8 @@ import Foundation
 
 class OMDbAPIService {
     
-    static let movieSearchURL = "http://www.omdbapi.com/?apikey={API KEY HERE}&s="
-    static let titleSearchURL = "http://www.omdbapi.com/?apikey={API KEY HERE}&t="
+    static let movieSearchURL = "http://www.omdbapi.com/?apikey=76971bf5&s="
+    static let titleSearchURL = "http://www.omdbapi.com/?apikey=76971bf5&t="
     static let session = URLSession.shared
     
     static func movieSearch(keyword: String, completion: @escaping (Error?, [Movie]?) -> Void) {

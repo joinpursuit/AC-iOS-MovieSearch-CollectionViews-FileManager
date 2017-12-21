@@ -16,11 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
         MovieDataStore.manager.load()
-        
-        fatalError("You need to update your OMDd API Key in OMDbAPIService.swift: http://www.omdbapi.com/apikey.aspx")
-        
         return true
     }
 
